@@ -1786,6 +1786,9 @@ int EncodeData(int nLevel, int nVersion , LPCSTR lpsSource, int sourcelen, unsig
 
 
 	// Check version (model number)
+    ZeroMemory(m_nBlockLength, MAX_DATACODEWORD);
+    ZeroMemory(m_byBlockMode, MAX_DATACODEWORD);
+    ZeroMemory(m_byDataCodeWord,MAX_DATACODEWORD);
 
 	 nEncodeVersion = GetEncodeVersion(nVersion, lpsSource, ncLength, m_nBlockLength, m_byBlockMode,m_byDataCodeWord);
 
